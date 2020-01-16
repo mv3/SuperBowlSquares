@@ -5,6 +5,7 @@ var refreshTime = 1000;
 
 $(document).ready(function() { 
     getScores(); 
+    populateGrid();
 });
 
 function getScores(){

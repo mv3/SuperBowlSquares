@@ -9,6 +9,17 @@ var gridValues = [
     ["7","TM","AS","GL","KH","MM","SH","MV","JP","KC","MS"],
     ["8","MS","TM","AS","GL","KH","MM","SH","MV","JP","KC"],
     ["9","KC","MS","TM","AS","GL","KH","MM","SH","MV","JP"],
-    ["0","JP","KC","MS","TM","AS","GL","KH","MM","SH","MV"]
-                    
+    ["0","JP","KC","MS","TM","AS","GL","KH","MM","SH","MV"]                    
 ];
+
+function populateGrid(){
+    var gridHtml ="";
+    for (var row = 0; row < gridValues.length; row++) {
+        gridHtml += `<div class="row">`;
+        for (var col = 0; col < gridValues[row].length; col++) {
+            gridHtml += `<div class="col-">${gridValues[row][col]}</div>`;
+        }
+        gridHtml += `</div>`;
+    }
+    $("#gameGrid").html(gridHtml);
+}
