@@ -1,10 +1,13 @@
+// 2020011900
 var gameId = '2017012200';
 var URL = 'http://www.nfl.com/liveupdate/game-center/' + gameId + '/' + gameId + '_gtd.json';
 var logoUrl = 'https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/';
 var refreshTime = 5000;
 var gridSelected = "";
 var homeNumber = 0;
+var homeColor = "#000000";
 var awayNumber = 0;
+var awayColor = "#000000";
 var currentWinner = "";
 
 $(document).ready(function() { 
@@ -29,9 +32,32 @@ function getScores(){
             $("#clock").html( gameData.clock);
             
             homeNumber = gameData.home.score.T.toString().split('').pop();
+            homeColor = getTeamColor(gameData.home.abbr);
             awayNumber = gameData.away.score.T.toString().split('').pop();
+            awayColor = getTeamColor(gameData.away.abbr);
+
             //refreshTime = gameData.nextupdate * 1000;        
             populateGrid();    
         }
     });
+}
+
+function getTeamColor(name){
+    switch(name) {
+        case "KC":
+            return "#E31837"
+          break;
+        case "TEN":
+            return "#0C2340"
+          break;
+        case "SF":
+            return "#AA0000"
+            break;
+        case "GB":
+            return "#203731"
+            break;
+        default:
+          // code block
+          return "#000000"
+      }
 }
