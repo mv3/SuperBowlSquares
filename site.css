@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Quantico|Roboto+Mono:700&display=swap');
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  color: #333333;
+  background-color: whitesmoke;
+}
+
+.lights {
+  color: red;
+  font-family: 'Quantico', sans-serif;
+  padding-left: 5px;
+}
+
 .teamLogo {
-    width: 25%
-  }
+    height: 45px;
+}
+
+.clock {
+  font-size: xx-large;
+}
+
+.score {
+  font-size: x-large;
+}
+
+.stats {
+  font-size: large;
+}

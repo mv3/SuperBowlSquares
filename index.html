@@ -12,24 +12,39 @@
     <link rel="stylesheet" href="site.css">
   </head>
   <body>
-    <h1>Snack Hole Super Bowl Squares Game</h1>
-    <div id = "scoreBoard">
-        <div id = "clock">
-            <span id = "clock"></span>
+    <!-- <h1>Snack Hole Super Bowl Squares Game</h1> -->
+    <div id = "scoreBoard" class="container">
+        <div class = "row text-center">
+          <div class="col">
+            <span id = "clock" class="lights clock"></span>
+          </div>
         </div>
-        <div id = "teams">
+        <div id = "teams" class="row text-center score">
+          <div class = "col">
             <span id = "homeLogo"></span>
-            <span id = "homeTeam"></span>:<span id="homeScore"></span>
-            <span> - </span>
+            <span id = "homeTeam"></span><span id="homeScore" class="lights"></span>
+          </div>
+          <div class = "col">
             <span id = "awayLogo"></span>
-            <span id = "awayTeam">DN</span>:<span id="awayScore"></span>
+            <span id = "awayTeam">DN</span><span id="awayScore" class="lights"></span>
+          </div>
         </div>
-        <div id = "game">            
-            <span>POS</span><span id="posTeam"></span>
-            <span>DN</span><span id="down"></span>            
-            <span>TO GO</span><span id="togo"></span>
-            <span>BALL ON</span><span id="yl"></span>
-            <span>QTR</span><span id="qtr"></span>
+        <div id = "game" class="row text-center stats">      
+          <div class="col">
+            <span>POS</span><span id="posTeam" class="lights"></span>
+          </div>
+          <div class="col">
+            <span>DN</span><span id="down" class="lights"></span>            
+          </div>  
+          <div class="col">
+            <span>TOGO</span><span id="togo" class="lights"></span>
+          </div>  
+          <div class="col">
+            <span>YL</span><span id="yl" class="lights"></span>
+          </div>  
+          <div class="col">
+            <span>QTR</span><span id="qtr" class="lights"></span>
+          </div>  
         </div>
     </div>
     <div id = "currentWinner">

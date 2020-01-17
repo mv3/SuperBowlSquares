@@ -1,18 +1,20 @@
 var gameId = '2017012200';
 var URL = 'http://www.nfl.com/liveupdate/game-center/' + gameId + '/' + gameId + '_gtd.json';
 var logoUrl = 'https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/';
-var refreshTime = 1000;
+var refreshTime = 5000;
+var gridSelected = "";
+var homeNumber = 0;
+var awayNumber = 0;
+var currentWinner = "";
 
 $(document).ready(function() { 
-    getScores(); 
-    populateGrid();
+    getScores();     
 });
 
 function getScores(){
     $.ajax({
         url: URL, success: function (data) {
             gameData = data[gameId];
-            console.log(gameData);
             $("#homeTeam").html( gameData.home.abbr);
             $("#homeLogo").html(`<img src="${logoUrl + gameData.home.abbr}.svg" alt="Home Team" class="teamLogo"></img>`);
             $("#homeScore").html( gameData.home.score.T);
@@ -25,9 +27,11 @@ function getScores(){
             $("#posTeam").html( gameData.posTeam);
             $("#yl").html( gameData.yl);
             $("#clock").html( gameData.clock);
-
-            refreshTime = gameData.nextupdate * 1000;
+            
+            homeNumber = gameData.home.score.T.toString().split('').pop();
+            awayNumber = gameData.away.score.T.toString().split('').pop();
+            //refreshTime = gameData.nextupdate * 1000;        
+            populateGrid();    
         }
     });
-    //setTimeout(refreshTime,getScores());
 }

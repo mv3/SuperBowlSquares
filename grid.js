@@ -13,13 +13,44 @@ var gridValues = [
 ];
 
 function populateGrid(){
+
     var gridHtml ="";
     for (var row = 0; row < gridValues.length; row++) {
-        gridHtml += `<div class="row">`;
+        gridHtml += `<div class="row  no-gutters">`;
+        
         for (var col = 0; col < gridValues[row].length; col++) {
-            gridHtml += `<div class="col-">${gridValues[row][col]}</div>`;
+            var selectedClass = "";
+            var borderClass = "";
+
+            if (gridValues[0][col] == homeNumber || gridValues[row][0] == awayNumber){
+                borderClass = "border-warning";
+            }
+            if (row == 0 && gridValues[row][col] == homeNumber){
+                selectedClass = "bg-warning";
+            }
+            if (col == 0 && gridValues[row][col] == awayNumber){
+                selectedClass = "bg-warning";
+            }
+            if (row > 0 && col > 0 && gridSelected == gridValues[row][col]){
+                selectedClass = "bg-primary";
+            }
+            if (row > 0 && col > 0 && gridSelected == gridValues[row][col] ){
+                selectedClass = "bg-primary";
+            }
+            if (gridValues[0][col] == homeNumber && gridValues[row][0] == awayNumber){
+                selectedClass = "bg-success";
+                currentWinner = gridValues[row][col];
+            }
+            
+            gridHtml += `<div class="col text-center border ${borderClass} ${selectedClass}"><span id="square${row}${col}" onclick="pickInitials('${gridValues[row][col]}')">${gridValues[row][col]}</span></div>`;
         }
         gridHtml += `</div>`;
     }
     $("#gameGrid").html(gridHtml);
 }
+
+function pickInitials(selected){
+    gridSelected = selected;
+    populateGrid();
+}
+
