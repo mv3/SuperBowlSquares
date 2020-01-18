@@ -21,7 +21,14 @@ function populateGrid(){
         for (var col = 0; col < gridValues[row].length; col++) {
             var selectedClass = "";
             var borderClass = "";
+            var bgStyle = "";
 
+            if(row == 0 && col > 0){
+                bgStyle = "color: #ffffff; background-color: " + homeColor;
+            }
+            if(col == 0 && row > 0){
+                bgStyle = "color: #ffffff; background-color: " + awayColor;
+            }
             if (gridValues[0][col] == homeNumber || gridValues[row][0] == awayNumber){
                 borderClass = "border-warning";
             }
@@ -42,7 +49,7 @@ function populateGrid(){
                 currentWinner = gridValues[row][col];
             }
             
-            gridHtml += `<div class="col text-center border ${borderClass} ${selectedClass}"><span id="square${row}${col}" onclick="pickInitials('${gridValues[row][col]}')">${gridValues[row][col]}</span></div>`;
+            gridHtml += `<div style="${bgStyle}" class="col text-center border ${borderClass} ${selectedClass}"><span id="square${row}${col}" onclick="pickInitials('${gridValues[row][col]}')">${gridValues[row][col]}</span></div>`;
         }
         gridHtml += `</div>`;
     }
