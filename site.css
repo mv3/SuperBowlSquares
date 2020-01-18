@@ -27,3 +27,32 @@ body {
 .stats {
   font-size: large;
 }
+
+.heading {
+  background-color: black;
+  color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+h1 {
+  font-size: medium;
+}
+
+#copy {
+  font-size: x-small;
+}
+
+a:link {
+  color: #333333;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+footer{
+  padding-top: 20px;
+}
+
+.snackLogo {
+height: 45px;
+}

@@ -1,6 +1,7 @@
-// var gameId = "2020011900";
-var gameId = '2017012200';
-var URL = 'http://www.nfl.com/liveupdate/game-center/' + gameId + '/' + gameId + '_gtd.json';
+var gameId = "2020011900";
+//var gameId = '2017012200';
+//var URL = 'http://www.nfl.com/liveupdate/game-center/' + gameId + '/' + gameId + '_gtd.json';
+var URL = 'http://www.nfl.com/liveupdate/scores/scores.json'
 var logoUrl = 'https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/';
 var refreshTime = 5000;
 var gridSelected = "";
