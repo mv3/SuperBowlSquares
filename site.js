@@ -29,7 +29,6 @@ function getScores(){
             $("#qtr").html( gameData.qtr);
             $("#down").html( gameData.down);
             $("#togo").html( gameData.togo);
-            $("#posTeam").html( gameData.posTeam);
             $("#yl").html( gameData.yl);
             $("#clock").html( gameData.clock);
 
