@@ -1,6 +1,7 @@
-var gameId = "2020011900";
-//var gameId = '2017012200';
-//var URL = 'http://www.nfl.com/liveupdate/game-center/' + gameId + '/' + gameId + '_gtd.json';
+// var gameId = '2017012200'; //test game
+// var URL = 'http://www.nfl.com/liveupdate/game-center/' + gameId + '/' + gameId + '_gtd.json';
+// var gameId = '2020011901'; // GB vs SF
+var gameId = "2020011900"; // Chiefs vs Titans
 var URL = 'http://www.nfl.com/liveupdate/scores/scores.json'
 var logoUrl = 'https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/';
 var refreshTime = 5000;
@@ -31,6 +32,12 @@ function getScores(){
             $("#posTeam").html( gameData.posTeam);
             $("#yl").html( gameData.yl);
             $("#clock").html( gameData.clock);
+
+            if (game.posTeam == gameData.home.abbr){
+                $("#posHome").html(`<i class="fas fa-football-ball"></i>`);
+            } else if (game.posTeam == gameData.away.abbr){
+                $("#posAway").html(`<i class="fas fa-football-ball"></i>`);
+            }
             
             homeNumber = gameData.home.score.T.toString().split('').pop();
             homeColor = getTeamColor(gameData.home.abbr);
@@ -38,7 +45,7 @@ function getScores(){
             awayColor = getTeamColor(gameData.away.abbr);
 
             //refreshTime = gameData.nextupdate * 1000;        
-            populateGrid();    
+            populateGrid();  
         }
     });
 }
