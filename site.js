@@ -39,9 +39,14 @@ function getScores(){
                 $("#posAway").html(`<i class="fas fa-football-ball"></i>`);
             }
             
-            homeNumber = gameData.home.score.T.toString().split('').pop();
-            homeColor = getTeamColor(gameData.home.abbr);
-            awayNumber = gameData.away.score.T.toString().split('').pop();
+            if (gameData.home.score.T != null){
+                homeNumber = gameData.home.score.T.toString().split('').pop();
+            }
+            if (gameData.away.score.T != null){
+                awayNumber = gameData.away.score.T.toString().split('').pop();
+            }
+
+            homeColor = getTeamColor(gameData.home.abbr);            
             awayColor = getTeamColor(gameData.away.abbr);
 
             //refreshTime = gameData.nextupdate * 1000;        
