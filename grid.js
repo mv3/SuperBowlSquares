@@ -33,10 +33,10 @@ function populateGrid(){
                 borderClass = "border-warning";
             }
             if (row == 0 && gridValues[row][col] == homeNumber){
-                selectedClass = "bg-warning";
+                borderClass = "border-warning";
             }
             if (col == 0 && gridValues[row][col] == awayNumber){
-                selectedClass = "bg-warning";
+                borderClass = "border-warning";
             }
             if (row > 0 && col > 0 && gridSelected == gridValues[row][col]){
                 selectedClass = "bg-primary";
@@ -45,7 +45,7 @@ function populateGrid(){
                 selectedClass = "bg-primary";
             }
             if (gridValues[0][col] == homeNumber && gridValues[row][0] == awayNumber){
-                selectedClass = "bg-success";
+                selectedClass = "bg-warning";
                 currentWinner = gridValues[row][col];
             }
             
