@@ -32,9 +32,9 @@ function getScores(){
             $("#yl").html( gameData.yl);
             $("#clock").html( gameData.clock);
 
-            if (game.posteam == gameData.home.abbr){
+            if (gameData.posteam == gameData.home.abbr){
                 $("#posHome").html(`<i class="fas fa-football-ball"></i>`);
-            } else if (game.posteam == gameData.away.abbr){
+            } else if (gameData.posteam == gameData.away.abbr){
                 $("#posAway").html(`<i class="fas fa-football-ball"></i>`);
             }
             
