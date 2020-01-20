@@ -48,7 +48,6 @@ function getScores(){
             homeColor = getTeamColor(gameData.home.abbr);            
             awayColor = getTeamColor(gameData.away.abbr);
 
-            //refreshTime = gameData.nextupdate * 1000;        
             populateGrid();  
         }
     });
