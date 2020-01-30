@@ -39,6 +39,7 @@ body {
 
 h1 {
   font-size: medium;
+  margin-top: 8px;
 }
 
 #copy {
