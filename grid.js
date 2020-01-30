@@ -1,15 +1,15 @@
 var gridValues = [
-    ["&nbsp;","0","1","2","3","4","5","6","7","8","9"],
-    ["1","MV","JP","KC","MS","TM","AS","GL","KH","MM","SH"],
-    ["2","SH","MV","JP","KC","MS","TM","AS","GL","KH","MM"],
-    ["3","MM","SH","MV","JP","KC","MS","TM","AS","GL","KH"],
-    ["4","KH","MM","SH","MV","JP","KC","MS","TM","AS","GL"],
-    ["5","GL","KH","MM","SH","MV","JP","KC","MS","TM","AS"],
-    ["6","AS","GL","KH","MM","SH","MV","JP","KC","MS","TM"],
-    ["7","TM","AS","GL","KH","MM","SH","MV","JP","KC","MS"],
-    ["8","MS","TM","AS","GL","KH","MM","SH","MV","JP","KC"],
-    ["9","KC","MS","TM","AS","GL","KH","MM","SH","MV","JP"],
-    ["0","JP","KC","MS","TM","AS","GL","KH","MM","SH","MV"]                    
+    ["&nbsp;","9","1","6","7","8","5","0","2","3","4"],
+    ["2","MV","SR","JP","SR","RS","KC","SR","MO","TC","KH"],
+    ["5","KC","MV","SM","JP","MO","AS","AS","SM","RS","KC"],
+    ["8","SR","RS","DS","SM","JP","SM","MO","SM","SM","RS"],
+    ["7","AS","MO","AS","MV","SR","JP","KC","RS","SR","KC"],
+    ["1","RS","SM","KC","SM","DS","RS","JP","SM","MO","AS"],
+    ["4","TC","SR","MO","AS","SM","MV","SM","JP","SM","TC"],
+    ["6","AS","SM","RS","SR","AS","MO","MV","KC","JP","KC"],
+    ["3","TC","MO","SM","SM","SM","RS","AS","MV","SM","JP"],
+    ["0","TC","KC","SR","SM","MO","SM","SM","SR","MV","TC"],
+    ["9","KH","TC","AS","RS","KC","TC","MO","TC","TC","MV"]                 
 ];
 
 function populateGrid(){
